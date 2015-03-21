@@ -17,6 +17,7 @@ gem "normalize-rails", "~> 3.0.0"
 gem "pg"
 gem "rack-timeout"
 gem "rails", "4.2.0"
+gem 'rails_admin'
 gem "recipient_interceptor"
 gem "refills"
 gem "sass-rails", "~> 5.0"
