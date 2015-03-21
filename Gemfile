@@ -4,6 +4,7 @@ ruby "2.2.0"
 
 gem "airbrake"
 gem "bourbon", "~> 4.2.0"
+gem 'ckeditor'
 gem "coffee-rails", "~> 4.1.0"
 gem "delayed_job_active_record"
 gem "email_validator"
