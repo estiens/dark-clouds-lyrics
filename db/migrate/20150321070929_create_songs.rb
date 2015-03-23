@@ -5,6 +5,8 @@ class CreateSongs < ActiveRecord::Migration
       t.text :lyrics
       t.string :soundcloud_url
       t.string :original_song_url
+      t.string :original_song
+      t.string :when_sung
 
       t.timestamps null: false
     end

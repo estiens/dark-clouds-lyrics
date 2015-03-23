@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(version: 20150321070929) do
     t.text     "lyrics"
     t.string   "soundcloud_url"
     t.string   "original_song_url"
+    t.string   "original_song"
+    t.string   "when_sung"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
   end
