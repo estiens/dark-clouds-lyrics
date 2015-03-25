@@ -8,11 +8,13 @@ gem 'ckeditor'
 gem "coffee-rails", "~> 4.1.0"
 gem "delayed_job_active_record"
 gem "email_validator"
+gem 'font-awesome-rails'
 gem "flutie"
 gem 'haml-rails'
 gem "high_voltage"
 gem "i18n-tasks"
 gem "jquery-rails"
+gem 'jquery_mobile_rails'
 gem "neat", "~> 1.7.0"
 gem "newrelic_rpm"
 gem "normalize-rails", "~> 3.0.0"

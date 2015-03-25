@@ -4,8 +4,8 @@
   #scroll-area
     %div.ui-list-view{data: {role: 'content'}}
       %ul{data: {role:'listview', inset: 'false', icon: 'false', divider_theme: 'b'}}
-        %li
-          -@songs.each do |song|
+        -@songs.each do |song|
+          %li
             %a{href: "##{song.slug}"}
               =song.title
 
@@ -17,6 +17,12 @@
       %h1=song.title
     .ui-content{data: {role: 'main'}}
       %h2 Lyrics
-      =raw(song.lyrics)
-      %h4 Sung To The Tune Of: #{link_to song.original_song, song.original_song_url}
-      %h4 Soundcloud: #{link_to song.soundcloud_url, song.soundcloud_url}
+      .lyrics_box
+        =raw(song.lyrics)
+      -unless song.original_song.blank?
+        -if song.original_song_url.blank?
+          %h5 Sung to the tune of: #{song.original_song}
+        -else
+          %h4 Sung To The Tune Of: #{link_to song.original_song, song.original_song_url}
+      -unless song.soundcloud_url.blank?
+        %h4 Soundcloud: #{link_to song.soundcloud_url, song.soundcloud_url}

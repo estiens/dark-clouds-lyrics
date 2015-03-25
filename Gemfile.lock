@@ -145,6 +145,8 @@ GEM
       thor (>= 0.14, < 2.0)
     jquery-ui-rails (5.0.3)
       railties (>= 3.2.16)
+    jquery_mobile_rails (1.4.5)
+      railties (>= 3.1.0)
     json (1.8.2)
     kaminari (0.16.3)
       actionpack (>= 3.0.0)
@@ -165,7 +167,7 @@ GEM
       bourbon (>= 4.0)
       sass (>= 3.3)
     nested_form (0.3.2)
-    newrelic_rpm (3.11.0.283)
+    newrelic_rpm (3.11.1.284)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     normalize-rails (3.0.1)
@@ -324,11 +326,13 @@ DEPENDENCIES
   email_validator
   factory_girl_rails
   flutie
+  font-awesome-rails
   formulaic
   haml-rails
   high_voltage
   i18n-tasks
   jquery-rails
+  jquery_mobile_rails
   launchy
   neat (~> 1.7.0)
   newrelic_rpm
