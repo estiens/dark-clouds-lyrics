@@ -25,6 +25,7 @@ gem "recipient_interceptor"
 gem "refills"
 gem "sass-rails", "~> 5.0"
 gem "simple_form"
+gem 'soundcloud'
 gem "title"
 gem "uglifier"
 gem "unicorn"

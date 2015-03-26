@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  get 'songs/index'
+  resources :songs
   root 'songs#index'
-
+  get "/show_song" => 'songs#show_song', as: 'show_song'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 end

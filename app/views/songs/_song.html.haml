@@ -1,0 +1,13 @@
+%div{class: "card", id: song.slug}
+  .card-image
+  .card-header
+    =song.title
+    -unless song.original_song.blank?
+      %br
+      .original_song
+        sung to the tune of #{song.original_song}
+  .card-copy
+    =raw(song.lyrics)
+  -unless song.soundcloud_html.blank?
+    .soundcloud_iframe
+      =raw(song.soundcloud_html)

@@ -1,0 +1,33 @@
+#chants{data: {role: "page", theme: 'a'} }
+  %div{data: {role: "header", position: "fixed", tap_toggle:"false", theme: 'b'}}
+    %h1
+      %i.fa.fa-cloud
+      DARK CLOUDS SONGBOOK
+  #scroll-area
+    %div.ui-list-view{data: {role: 'content'}}
+      %ul{data: {role:'listview', inset: 'false', icon: 'false', divider_theme: 'b'}}
+        -@songs.each do |song|
+          %li
+            %a{href: "##{song.slug}"}
+              =song.title
+
+-@songs.each do |song|
+  %div{id: "#{song.slug}", data: {role: 'page'}}
+    %div{data: {role: 'header'}}
+      %a{href: '#chants', data_ajax: 'false'}
+        %i.fa.fa-chevron-left
+      %h1=song.title
+    .ui-content{data: {role: 'main'}}
+      %h2 Lyrics
+      .lyrics_box
+        =raw(song.lyrics)
+      -unless song.original_song.blank?
+        -if song.original_song_url.blank?
+          %h5 Sung to the tune of:
+          #{song.original_song}
+        -else
+          %h4 Sung To The Tune Of:
+          #{link_to song.original_song, song.original_song_url}
+      -unless song.soundcloud_url.blank?
+        %h4 Soundcloud:
+        #{link_to song.soundcloud_url, song.soundcloud_url}
