@@ -21,6 +21,7 @@ gem "normalize-rails", "~> 3.0.0"
 gem "pg"
 gem "rails", "4.2.0"
 gem 'rails_admin'
+gem 'responders', '~> 2.0'
 gem "recipient_interceptor"
 gem "refills"
 gem "sass-rails", "~> 5.0"
