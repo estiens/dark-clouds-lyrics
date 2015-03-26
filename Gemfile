@@ -19,7 +19,6 @@ gem "neat", "~> 1.7.0"
 gem "newrelic_rpm"
 gem "normalize-rails", "~> 3.0.0"
 gem "pg"
-gem "rack-timeout"
 gem "rails", "4.2.0"
 gem 'rails_admin'
 gem "recipient_interceptor"
@@ -29,12 +28,6 @@ gem "simple_form"
 gem "title"
 gem "uglifier"
 gem "unicorn"
-
-group :development do
-  gem "spring"
-  gem "spring-commands-rspec"
-  gem "web-console"
-end
 
 group :development, :test do
   gem "awesome_print"
