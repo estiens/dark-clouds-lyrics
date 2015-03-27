@@ -3,13 +3,20 @@ header {
   min-height: 5em;
 }
 
+body {
+  background:black;
+  font-family: 'Montserrat', sans-serif;
+}
+
 #header-text {
   color: white;
   font-family: 'Neuton', serif;
   font-size: 3em;
-  margin-left: 1em;
+  margin-right: 2em;
+  margin-top: 1em;
+  float:right;
   img {
-    margin-top: 10px;
+    margin-top: 0px;
     -webkit-filter: invert(100%);
     filter: invert(100%);
   }
@@ -17,8 +24,10 @@ header {
 
 .container {
   @include outer-container;
-  margin-top: 4em;
-  background-color:rgba(0,0,0,.1)
+  margin-top: 2em;
+  background-color:white;
+  border-radius: 25px;
+  padding:50px;
   }
 
 #menu {

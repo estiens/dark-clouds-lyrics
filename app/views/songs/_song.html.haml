@@ -10,4 +10,4 @@
     =raw(song.lyrics)
   -unless song.soundcloud_html.blank?
     .soundcloud_iframe
-      =raw(song.soundcloud_html)
+      =raw(song.soundcloud_html.gsub('="400"', '=100'))

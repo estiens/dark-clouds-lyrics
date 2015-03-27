@@ -1,2 +1,2 @@
 $ ->
-  $('header').sticky()
+  $('header-text').sticky();
