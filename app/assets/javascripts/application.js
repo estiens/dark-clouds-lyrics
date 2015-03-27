@@ -13,5 +13,4 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
-//= require jquery.mobile
 //= require jQuery-flex-vertical-center

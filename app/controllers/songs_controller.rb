@@ -3,8 +3,7 @@ class SongsController < ApplicationController
     @songs = Song.all.sort_by(&:title)
 
     respond_to do |format|
-      format.html.phone {render 'mobile-index'}
-      format.html.none
+      format.html.phone {redirect_to '/mobile-index'}
       format.json {render @songs.to_json}
     end
   end

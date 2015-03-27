@@ -14,7 +14,6 @@ gem 'haml-rails'
 gem "high_voltage"
 gem "i18n-tasks"
 gem "jquery-rails"
-gem 'jquery_mobile_rails'
 gem "neat", "~> 1.7.0"
 gem "newrelic_rpm"
 gem "normalize-rails", "~> 3.0.0"

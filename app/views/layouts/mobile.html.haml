@@ -1,0 +1,16 @@
+!!! 5
+%html{:lang => 'en'}
+  %head
+    %meta{:charset => 'utf-8'}
+    %meta{:name => 'viewport', :content => 'width=device-width, initial-scale=1'}
+    %title= 'My Mobile App'
+    %link{:rel => 'stylesheet', :href => 'http://fonts.googleapis.com/css?family=Roboto:400,300,300italic'}
+    %link{:rel => 'stylesheet', :href => 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css'}
+    %link{:rel => 'stylesheet', :href => 'http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css'}
+    %script{:src => '//code.jquery.com/jquery-2.1.3.min.js'}
+    %script{:src => '//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js'}
+    = stylesheet_link_tag 'jquerymobile.nativedroid'
+    = stylesheet_link_tag 'jquerymobile.blue'
+    =stylesheet_link_tag 'jquerymobile.nativedroid.dark'
+  %body
+    = yield(:layout)
