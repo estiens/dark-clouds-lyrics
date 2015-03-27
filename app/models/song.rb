@@ -16,6 +16,10 @@ class Song < ActiveRecord::Base
     end
   end
 
+  def as_json(options={})
+    super(:only => [:title, :lyrics, :original_song, :soundcloud_url])
+  end
+
   private
 
   def get_soundcloud_embed
