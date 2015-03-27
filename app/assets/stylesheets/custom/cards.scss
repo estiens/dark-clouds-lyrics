@@ -1,23 +1,36 @@
 header {
+  background-color:black;
+  min-height: 5em;
 }
 
 #header-text {
+  color: white;
   font-family: 'Neuton', serif;
-  font-size: 10.9vw;
-  color: red;
-  -webkit-text-fill-color: transparent;
-  background: -webkit-linear-gradient(transparent, transparent),
-             url(http://timpietrusky.com/cdn/army.png) repeat;
-  background: -o-linear-gradient(transparent, transparent);
-  -webkit-background-clip: text;
+  font-size: 3em;
+  margin-left: 1em;
+  img {
+    margin-top: 10px;
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
   }
+}
 
 .container {
   @include outer-container;
+  margin-top: 4em;
+  background-color:rgba(0,0,0,.1)
   }
 
 #menu {
   @include span-columns(4);
+  line-height:2em;
+  li a {
+    color: black;
+
+    &:hover {
+      color: $loon-blue
+    }
+  }
 }
 
 #songs {
@@ -39,8 +52,8 @@ header {
   $card-border-color: $base-border-color;
   $card-border: 1px solid $card-border-color;
   $card-background: lighten($card-border-color, 10%);
-  $card-header-background: transparentize(blue, 0.9);
-  $card-hover-background: lighten($card-background, 5%);
+  $card-header-background: lighten($loon-blue, 15%);
+  $card-hover-background: darken($card-header-background, 5%);
   $card-image-background: #DBD199;
   $card-image-hover-background: lighten($card-image-background, 5%);
   $card-margin: 1em;
@@ -53,7 +66,7 @@ header {
   margin: 0 $card-margin $base-spacing $card-margin;
   position: relative;
   position: relative;
-  text-align: center;
+  // text-align: center;
 
   .card-image {
     overflow: hidden;
@@ -70,12 +83,14 @@ header {
 
   .card-header {
     @include transition (all 0.2s ease-in-out);
-    background-color: $card-header-background;
+    background-color: black;
+    // background-color: $card-header-background;
     border-bottom: $card-border;
     border-radius: $base-border-radius $base-border-radius 0 0;
     font-weight: bold;
     font-size: 1.5em;
     line-height: 1.5em;
+    color: white;
     padding: ($base-spacing / 3) ($base-spacing / 2);
     .original_song {
       font-size: 0.8em;
@@ -85,7 +100,7 @@ header {
 
   .card-copy {
     font-size: 1em;
-    line-height: 1em;
+    line-height: 1.2em;
     padding: ($base-spacing / 2) ($base-spacing / 2);
     p {
       margin: 0 0 ($base-spacing / 2);
@@ -94,8 +109,6 @@ header {
 
   &:focus,
   &:hover {
-    background-color: transparentize(red, 0.9);
-
     .card-image img {
       background: $card-image-hover-background;
     }
