@@ -1,11 +1,13 @@
-header {
-  background-color:black;
-  min-height: 5em;
-}
-
 body {
   background:black;
   font-family: 'Montserrat', sans-serif;
+}
+
+// header
+
+header {
+  background-color:black;
+  min-height: 5em;
 }
 
 #header-text {
@@ -22,6 +24,8 @@ body {
   }
 }
 
+//c ontainer
+
 .container {
   @include outer-container;
   margin-top: 2em;
@@ -29,6 +33,8 @@ body {
   border-radius: 25px;
   padding:50px;
   }
+
+// specific styles for page
 
 #menu {
   @include span-columns(4);
@@ -133,5 +139,15 @@ body {
     .card-header {
       background-color: $card-background;
     }
+  }
+}
+
+footer {
+  margin-left: 4em;
+  color: white;
+  font-size: .8em;
+
+  .tiny {
+    font-size: .5em;
   }
 }
