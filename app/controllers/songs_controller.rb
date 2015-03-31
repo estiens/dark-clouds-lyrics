@@ -1,9 +1,13 @@
 class SongsController < ApplicationController
-  respond_to :html, :json
 
   def index
     @songs = Song.all.sort_by(&:title)
-    respond_with(@songs)
+
+    respond_to do |format|
+      format.json
+      format.html
+      format.html.phone {redirect_to '/mobile-index' }
+    end
   end
 
   def show_song
