@@ -13,6 +13,7 @@ class Song < ActiveRecord::Base
       field :original_song
       field :original_song_url
       field :when_sung
+      field :archived
     end
   end
 

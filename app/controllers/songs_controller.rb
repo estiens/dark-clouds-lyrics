@@ -1,7 +1,7 @@
 class SongsController < ApplicationController
 
   def index
-    @songs = Song.all.sort_by(&:title)
+    @songs = Song.where(archived: [false,nil]).sort_by(&:title)
 
     respond_to do |format|
       format.json {render :json => @songs}
