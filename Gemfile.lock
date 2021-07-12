@@ -36,7 +36,8 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
-    addressable (2.3.7)
+    addressable (2.8.0)
+      public_suffix (>= 2.0.2, < 5.0)
     airbrake (4.1.0)
       builder
       multi_json
@@ -163,7 +164,9 @@ GEM
       mime-types (>= 1.16, < 3)
     method_source (0.8.2)
     mime-types (2.4.3)
-    mimemagic (0.3.0)
+    mimemagic (0.4.3)
+      nokogiri (~> 1)
+      rake
     mini_portile (0.6.2)
     minitest (5.5.1)
     multi_json (1.11.0)
@@ -185,6 +188,7 @@ GEM
       slop (~> 3.4)
     pry-rails (0.3.3)
       pry (>= 0.9.10)
+    public_suffix (3.1.1)
     rack (1.6.0)
     rack-pjax (0.8.0)
       nokogiri (~> 1.5)
